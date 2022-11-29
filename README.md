@@ -163,10 +163,51 @@ console.log("No se reconoce la suscripción")
 
 **- Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).**
 
-```js
+````js
 
 // Mi solución
 
+function mySuscripcion(suscripcion){
+if (suscripcion === "Basic") {
+console.log("Puedes tomar casi todos los cursos durante un mes");
+return;
+}
+
+if (suscripcion === "Free") {
+console.log("Solo puedes tomar los cursos gratis");
+return;
+}
+
+if (suscripcion === "Expert") {
+console.log("Puedes tomar casi todos los cursos durante un año");
+return;
+}
+
+if (suscripcion === "Full Plus") {
+console.log("Tú y alguien más pueden tomar TODOS los cursos durante un año");
+return;
+}
+console.warn("No se reconoce la suscripción")
+}
+
+````
+
+**- Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays o objetos y un solo condicional.**
+```js
+const suscriptionsTypes = {
+free: 'Solo puedes tomar los cursos gratis',
+basic: 'Puedes tomar casi todos los cursos durante un mes',
+expert: 'Puedes tomar casi todos los cursos durante un año',
+fullPlus: 'Tú y alguien más pueden tomar TODOS los cursos durante un año'
+}
+
+function getSuscription (suscription){
+if (suscriptionsTypes[suscription]) {
+console.log(suscriptionsTypes[suscription])
+return;
+}
+console.warn("No se reconoce la suscripción")
+}
 ```
 
 ## Ciclos
