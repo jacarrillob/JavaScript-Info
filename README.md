@@ -190,6 +190,8 @@ return;
 console.warn("No se reconoce la suscripción")
 }
 
+mySuscripcion('Basic');
+
 ````
 
 **- Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays o objetos y un solo condicional.**
@@ -208,6 +210,8 @@ return;
 }
 console.warn("No se reconoce la suscripción")
 }
+
+getSuscription('free');
 ```
 
 ## Ciclos
