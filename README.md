@@ -228,25 +228,62 @@ sum = resultado;
 
 ## Listas
 
-DEBO CONTINUAR AQUI - CLASE 7
-
-
 - **¿Qué es un array?**
+*Es una lista de elementos*
 
+```js
+const array = [1, 'texto', true, false, { nombre: 'Pepito', edad: 3 }];
+```
 
 - **¿Qué es un objeto?**
+*Es una lista de elementos PERO cada elemento tiene un nombre clave.*
 
+```js
+const obj = {
+  nombre: 'Pepito',
+  edad: 3,
+  comidasFavoritas: ['Pizza', 'Vegetales'],
+};
+```
 
 - **¿Cuándo es mejor usar objetos o arrays?**
-
+*Arrays cuando lo que haremos en un elemento es lo mismo que en todos los demás (la regla se puede incumplir). Mientras que un objeto cuando los nombres de cada elemento son importantes para nuestro algoritmo.*
 
 - **¿Puedo mezclar arrays con objetos o incluso objetos con arrays?**
-
-
+*Sí. Los arrays pueden guardar objetos. Y los objetos pueden guardar arrays entre sus propiedades.*
 
 - **Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.**
+```js
+function myFirstElement(array) {
+console.log(array[0]);
+}
+const list = ['Juan','Pedro','Maria','Rocio'];
+myFirstElement(list); // Juan 
+```
 
 - ** Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).**
-
+```js
+function printArray(array) {
+for(let i = 0; i < array.length; i++ ){
+console.log(array[i]);
+	}
+}
+const list = ['Juan','Pedro','Maria','Rocio'];
+printArray(list);
+```
 
 - **Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).**
+```js
+function printObject(obj) {
+const array = Object.values(obj);
+for(let i = 0; i < array.length; i++ ){
+console.log(array[i]);
+	}
+}
+const myObj = {name: 'Jose',
+edad: 30,
+isDev: true,
+favoriteColors: ['Orange','Green'],
+};
+printObject(myObj);
+```
